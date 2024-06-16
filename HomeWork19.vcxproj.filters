@@ -29,5 +29,8 @@
     <ClInclude Include="DoubleLinkedListe.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

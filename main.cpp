@@ -1,19 +1,33 @@
 
 #include <iostream>
-#include "SingleLinkedListe.h"
+#include "Stack.h"
 
 int main()
 {
-	SingleLinkedList<int> test {1, 5, 4, 9};
+	Stack<int> test;
+	test.add(5);
+	test.add(2);
 	while (true)
 	{
 		try
 		{
-			std::cout << test.first() << " ";
+			std::cout << test.first() << "\n";
 			test.pop();
 		}
 		catch (std::out_of_range)
 		{
+			break;
+		}
+	}
+	while (true)
+	{
+		try
+		{
+			test.add(5);
+		}
+		catch (std::overflow_error)
+		{
+			std::cout << "Stack is full Stack size: " << test.getSize();
 			break;
 		}
 	}
