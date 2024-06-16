@@ -27,6 +27,8 @@ template<typename T>
 inline void DoubleLinkedList<T>::add(const T& value)
 {
 	Node* newNode = new Node{ value, this->head, nullptr };
+	if (this->head)
+		this->head->last = newNode;
 	this->head = newNode;
 	this->size++;
 }

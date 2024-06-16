@@ -12,6 +12,8 @@ public:
 	LinkedList() : head(nullptr), size(0) {};
 	~LinkedList();
 
+	void clear();
+
 	bool isClear() { return !head; }
 	size_t lenght() const { return size; }
 
@@ -37,6 +39,12 @@ public:
 template<typename T, class N>
 inline LinkedList<T, N>::~LinkedList()
 {
+	clear();
+}
+
+template<typename T, class N>
+inline void LinkedList<T, N>::clear()
+{
 	N* ptr = head;
 	while (ptr)
 	{
@@ -44,6 +52,8 @@ inline LinkedList<T, N>::~LinkedList()
 		ptr = ptr->next;
 		delete tmp;
 	}
+	size = 0;
+	head = nullptr;
 }
 
 template<typename T, class N>

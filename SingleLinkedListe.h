@@ -18,8 +18,8 @@ public:
 	SingleLinkedList() : LinkedList<T, Node>() {};
 	SingleLinkedList(const std::initializer_list<T>& lst);
 
-	void add(const T& value) override;
-	void pop() override;
+	virtual void add(const T& value) override;
+	virtual void pop() override;
 };
 
 template<typename T>

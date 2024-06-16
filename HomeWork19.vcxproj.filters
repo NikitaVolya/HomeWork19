@@ -32,5 +32,8 @@
     <ClInclude Include="Stack.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

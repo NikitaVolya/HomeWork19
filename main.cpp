@@ -1,33 +1,22 @@
 
 #include <iostream>
-#include "Stack.h"
+#include "Queue.h"
 
 int main()
 {
-	Stack<int> test;
-	test.add(5);
+	Queue<int> test;
 	test.add(2);
+	test.add(3);
+	test.add(4);
 	while (true)
 	{
 		try
 		{
-			std::cout << test.first() << "\n";
+			std::cout << test.getValue() << std::endl;
 			test.pop();
 		}
 		catch (std::out_of_range)
 		{
-			break;
-		}
-	}
-	while (true)
-	{
-		try
-		{
-			test.add(5);
-		}
-		catch (std::overflow_error)
-		{
-			std::cout << "Stack is full Stack size: " << test.getSize();
 			break;
 		}
 	}
